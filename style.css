@@ -1,0 +1,103 @@
+/* Layout helpers for our simple "table" rows */
+.table { width: 100%; }
+.t-row { display: grid; grid-template-columns: 260px 1fr 1fr 1fr; gap: 12px; margin-bottom: 10px; }
+.t-row.t-head { font-weight: 700; color: #4a5568; }
+.t-cell { background: #fff; border: 1px solid #edf1f7; border-radius: 10px; padding: 10px 12px; display: flex; align-items: center; justify-content: center; min-height: 56px; }
+.w-project { justify-content: flex-start; gap: 8px; }
+
+.project-title { font-weight: 700; color: #2d3748; }
+.dept-chip {
+  display:inline-flex; align-items:center; justify-content:center;
+  font-size:12px; font-weight:700; border-radius:999px; padding:4px 8px;
+  background:#ecfdf5; color:#047857; border:1px solid #d1fae5;
+}
+
+/* ---- Cells: base ---- */
+.cell {
+  background: #fff;
+  border: 1px solid #edf1f7;
+  border-radius: 10px;
+  padding: 10px 12px;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Idle = blank with dashed border */
+.cell.idle {
+  background: transparent;
+  border: 1px dashed #e6e9f0;
+}
+
+/* ---- Phase badges ---- */
+.badge {
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 6px 12px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+}
+
+.badge.planning     { background:#e7f0ff; color:#2563eb; }
+.badge.design       { background:#fff3c4; color:#b45309; }
+.badge.development  { background:#ffe2e2; color:#b91c1c; }
+.badge.testing      { background:#d9fbe5; color:#047857; }
+.badge.delivery     { background:#efe1ff; color:#7c3aed; }
+
+/* -------- Yearly grid -------- */
+.year-grid {
+  display: grid;
+  grid-template-columns: 260px repeat(12, 1fr);
+  gap: 12px;
+  margin: 12px 0 8px 0;
+}
+.y-head { font-weight: 700; color:#4a5568; display:flex; align-items:center; justify-content:center; }
+.y-left { display:flex; align-items:center; gap:8px; }
+.month-head {
+  font-weight: 700; color:#4a5568; background:#f8fafc; border:1px solid #edf1f7; border-radius:10px;
+  display:flex; align-items:center; justify-content:center; padding:10px 0;
+}
+
+/* Each yearly row */
+.year-row {
+  display: grid;
+  grid-template-columns: 260px repeat(12, 1fr);
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+/* Month cells (bars live inside these) */
+.month-cell {
+  background:#fff;
+  border:1px solid #edf1f7;
+  border-radius:10px;
+  min-height:52px;
+  position:relative;
+}
+.month-cell.idle {
+  background: transparent;
+  border:1px dashed #e6e9f0;
+}
+
+/* Effort bar (height encodes MM) */
+.bar {
+  position: absolute;
+  left: 8px; right: 8px; bottom: 8px;
+  border-radius: 6px;
+  display: flex;
+  align-items:center; justify-content:center;
+  font-size: 12px; font-weight: 700; color: #23304a;
+}
+
+/* Bar phase colors */
+.bar.planning     { background:#e7f0ff; }
+.bar.design       { background:#fff3c4; }
+.bar.development  { background:#ffe2e2; }
+.bar.testing      { background:#d9fbe5; }
+.bar.delivery     { background:#efe1ff; }
