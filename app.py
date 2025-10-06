@@ -848,17 +848,17 @@ low_activity = total_projects - active_count
 st.markdown(
     """
 <div style='display:flex;gap:12px;align-items:center;margin:16px 0;flex-wrap:wrap;'>
-  <div style='padding:10px 20px;border-radius:8px;font-weight:600;border:2px solid #667eea;background:#f5f7ff;color:#667eea;display:flex;align-items:center;gap:8px;'>
-    <div style='font-size:24px;'>{}</div>
-    <div style='font-size:12px;opacity:0.8;'>Total Projects</div>
+  <div style='padding:10px 20px;border-radius:8px;font-weight:600;border:2px solid #667eea;background:#f5f7ff;color:#667eea;display:flex;align-items:center;gap:10px;'>
+    <div style='font-size:28px;font-weight:700;'>{}</div>
+    <div style='font-size:13px;opacity:0.85;font-weight:600;'>Total Projects</div>
   </div>
-  <div style='padding:10px 20px;border-radius:8px;font-weight:600;border:2px solid #f43f5e;background:#fef2f2;color:#f43f5e;display:flex;align-items:center;gap:8px;'>
-    <div style='font-size:24px;'>{}</div>
-    <div style='font-size:12px;opacity:0.8;'>Active This Month</div>
+  <div style='padding:10px 20px;border-radius:8px;font-weight:600;border:2px solid #f43f5e;background:#fef2f2;color:#f43f5e;display:flex;align-items:center;gap:10px;'>
+    <div style='font-size:28px;font-weight:700;'>{}</div>
+    <div style='font-size:13px;opacity:0.85;font-weight:600;'>Active This Month</div>
   </div>
-  <div style='padding:10px 20px;border-radius:8px;font-weight:600;border:2px solid #10b981;background:#f0fdf4;color:#10b981;display:flex;align-items:center;gap:8px;'>
-    <div style='font-size:24px;'>{}</div>
-    <div style='font-size:12px;opacity:0.8;'>Low Activity</div>
+  <div style='padding:10px 20px;border-radius:8px;font-weight:600;border:2px solid #10b981;background:#f0fdf4;color:#10b981;display:flex;align-items:center;gap:10px;'>
+    <div style='font-size:28px;font-weight:700;'>{}</div>
+    <div style='font-size:13px;opacity:0.85;font-weight:600;'>Low Activity</div>
   </div>
 </div>
 """.format(total_projects, active_count, low_activity),
