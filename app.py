@@ -863,7 +863,7 @@ st.markdown(
 </div>
 """.format(total_projects, active_count, low_activity),
     unsafe_allow_html=True,
-)
+) 
 
 tab1, tab2, tab3 = st.tabs(["3-Month Heat Map (Blocks)", "Yearly Timeline (Bars)", "Dashboard"])
 
